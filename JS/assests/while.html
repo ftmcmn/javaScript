@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="sayi">4 basamaklı bir sayı giriniz</label>
+    <input type="text" name="" id="sayi" />
+    <button onclick="toplam()">toplam</button>
+    <h3 id="toplam"></h3>
+    <script>
+      function toplam() {
+        let sayi = document.querySelector("#sayi").value;
+        sayi = isNaN(sayi + 1) ? 0 : sayi;
+        let toplam = 0;
+
+        while (sayi > 0) {
+          toplam += sayi % 10;
+          sayi = Math.floor(sayi / 10);
+        }
+
+        alert(toplam);
+        document.querySelector("h3").innerHTML = toplam;
+      }
+    </script>
+  </body>
+</html>

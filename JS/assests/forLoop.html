@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="rate" />
+    <button onclick="calculate()">Update</button>
+
+    <ul>
+      <li>Notebook <span>1500</span> $</li>
+      <li>Monitör <span>500</span>$</li>
+      <li>Keyboard <span>100</span>$</li>
+      <li>Mouse <span>10</span>$</li>
+      <li>Soundcar <span>150</span>$</li>
+    </ul>
+
+    <script>
+      function calculate() {
+        let rate = document.querySelector("#rate").value;
+
+        rate = !isNaN(rate) ? rate : 0;
+
+        for (let i = 1; i < 6; i++) {
+          let price = document.querySelector(
+            `ul li:nth-child(${i}) span`
+          ).innerHTML;
+          console.log(price);
+
+          document.querySelector(`ul li:nth-child(${i}) span`).innerHTML =
+            price - (price * rate) / 100;
+        }
+      }
+    </script>
+  </body>
+</html>
