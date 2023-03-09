@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btnSetPrices">set prices</button>
+    <script>
+      const fiyatlar = [123, 5666, 126, 67];
+
+      document.querySelector("#btnSetPrices").addEventListener("click", () => {
+        for (let i = 0; i < fiyatlar.length; i++) {
+          fiyatlar[i] = (fiyatlar[i] * 1.2).toFixed(2);
+        }
+        console.log(fiyatlar);
+      });
+    </script>
+  </body>
+</html>

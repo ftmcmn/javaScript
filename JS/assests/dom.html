@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin: 5px;
+      }
+
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Bugün hava sıcak</h2>
+
+    <button id="btn1">Add</button><button id="btn2">Remove</button
+    ><button id="btn3">Toggle</button><button id="btn4">Replace</button>
+
+    <script>
+      const btn1 = document.querySelector("#btn1");
+      const btn2 = document.querySelector("#btn2");
+      const btn3 = document.querySelector("#btn3");
+      const btn4 = document.querySelector("#btn4");
+
+      btn1.addEventListener("click", () => {
+        document.querySelector("h2").classList.add("red");
+      });
+
+      btn2.addEventListener("click", () => {
+        document.querySelector("h2").classList.remove("red");
+      });
+
+      btn3.addEventListener("click", () => {
+        document.querySelector("h2").classList.toggle("red");
+      });
+
+      btn4.addEventListener("click", () => {
+        document.querySelector("h2").classList.replace("red", "blue");
+      });
+    </script>
+  </body>
+</html>
