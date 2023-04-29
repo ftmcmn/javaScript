@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="ekran-container">
+      <div class="ekran-header">
+        <div class="ekran">
+          <span id="ekran">jggghhdh</span>
+        </div>
+      </div>
+      <div class="ekran-body">
+        <div class="form-control">
+          <label for="sifre">Şifre Uzunluğu</label>
+          <input
+            type="number"
+            id="sifre"
+            name="sifre"
+            min="1"
+            max="100"
+            value="8"
+          />
+        </div>
+        <div class="form-control">
+          <label for="buyuk">Buyuk Harf Içersin</label>
+          <input type="checkbox" id="buyuk" name="karakter" min="1" max="100" />
+        </div>
+        <div class="form-control">
+          <label for="kucuk">Küçük Harf Içersin</label>
+          <input type="checkbox" id="kucuk" name="karakter" min="1" max="100" />
+        </div>
+        <div class="form-control">
+          <label for="rakam">Rakam Içersin</label>
+          <input type="checkbox" id="rakam" name="karakter" min="1" max="100" />
+        </div>
+        <div class="form-control">
+          <label for="karakter">Özel Karakter Içersin</label>
+          <input
+            type="checkbox"
+            id="karakter"
+            name="karakter"
+            min="1"
+            max="100"
+          />
+        </div>
+        <button class="uret" id="uret">Şifre uret</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
