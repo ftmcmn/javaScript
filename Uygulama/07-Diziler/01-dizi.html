@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //pozitif ve çift sayıların adedi ve toplamı
+      const dizi = [-5, 6, -7, 10, 20, -9, 4, 5, -8, -7, 30];
+      let adet = 0,
+        toplam = 0;
+
+      for (let i = 0; i < dizi.length; i++) {
+        if (dizi[i] > 0 && dizi[i] % 2 == 0) {
+          adet++;
+          toplam += dizi[i];
+        }
+      }
+      console.log("Pozitif ve çift sayı adedi: " + adet);
+      console.log("Pozitif ve çift sayıların toplamı: " + toplam);
+
+      // 2. yöntem
+      let negatifler = dizi.filter((sayi) => sayi < 0);
+      console.log("Negatif sayı adedi: " + negatifler.length);
+      console.log(
+        "Negatif sayıların toplamı: " +
+          negatifler.reduce((toplam, sayi) => toplam + sayi, 0)
+      );
+
+      // ülke ve başkentlerin yazılı olduğu dizilerinde indis elemanarını birleştirerek
+      //ülke ve başkentlerin eşleştiği bir dizi oluşturunuz.
+      const ulkeler = ["Türkiye", "Almanya", "Fransa", "İngiltere"];
+      const baskentler = ["Ankara", "Berlin", "Paris", "Londra"];
+
+      const ulkeBaskent = ulkeler.map((ulke, index) => {
+        return [ulke, baskentler[index]];
+      });
+      console.log(ulkeBaskent);
+
+      // 2. yöntem
+      const birlesikDizi = [];
+      for (let i in ulkeler) {
+        birlesikDizi.push([ulkeler[i], baskentler[i]]);
+      }
+      console.log(birlesikDizi);
+
+      //dizinin her bir elemanını ilk 3 karakterini büyük harfli olarak değiştirerek alfabedik sıralayınız.
+      const isimler = ["ahmet", "mehmet", "ismet", "hasan", "hüseyin"];
+      const isimler2 = isimler.map(
+        (isim) =>
+          isim.slice(0, 3).toLocaleUpperCase() + isim.slice(3, isim.length)
+      );
+      console.log(isimler2.sort());
+
+      //dizideki herbir elemanın iki katının mutlak değerini alarak yeni bir dizi oluşturunuz.
+      //yeni dizi elemanlarını azalan şekilde sıralayınız.
+      const sayilar = [-5, 6, -7, 10, 20, -9, 4, 5, -8, -7, 30];
+      const sayilar2 = sayilar.map((sayi) => Math.abs(sayi * 2));
+      console.log(sayilar2.sort((a, b) => b - a));
+
+      //dizideki elemanlardan uuzunluğu belirli sayıya eşit olanları yeni bir diziye aktarınız.
+      const isimler3 = ["ahmet", "mehmet", "ismet", "hasan", "hüseyin"];
+      let yeniIsimler = [];
+
+      const filtrele = (uzunluk) => {
+        yeniIsimler = isimler3.filter((isim) => isim.lenght === uzunluk);
+        return yeniIsimler;
+      };
+
+      console.log(filtrele(5));
+
+      //dizideki sayıların ortalamasını bulun ortalamadan büyük olanları yeni bir diziye aktarınız.
+      const sayilar4 = [-5, 6, -7, 10, 20, -9, 4, 5, -8, -7, 30];
+      const ortalama = Math.floor(
+        sayilar4.reduce((toplam, sayi) => toplam + sayi, 0) / sayilar4.length
+      );
+      console.log(ortalama);
+      const buyukler = sayilar4.filter((sayi) => sayi > ortalama);
+      console.log(buyukler);
+
+      //dizideki notların ortalamasını bulun, ortalamadan büyük olanların ortalamasını %20, düşük olanların ortalamasını %10 artırarak yeni bir dizi oluşturunuz.
+      const notlar = [
+        { ad: "ahmet", not: 50 },
+        { ad: "mehmet", not: 60 },
+        { ad: "ismet", not: 70 },
+        { ad: "hasan", not: 80 },
+        { ad: "hüseyin", not: 90 },
+        { ad: "ali", not: 100 },
+        { ad: "veli", not: 40 },
+        { ad: "ayşe", not: 30 },
+        { ad: "fatma", not: 20 },
+        { ad: "hayriye", not: 10 },
+      ];
+
+      const ortalama2 = Math.floor(
+        notlar.reduce((toplam, not) => toplam + not.not, 0) / notlar.length
+      );
+      console.log(ortalama2);
+      const buyukler2 = notlar.filter((not) => not.not > ortalama2);
+      buyukler2.map((not) => (not.not = not.not * 1.2));
+      console.log(buyukler2);
+
+      const kucukler = notlar.filter((not) => not.not < ortalama2);
+      kucukler.map((not) => (not.not = not.not * 1.1));
+      console.log(kucukler);
+
+      //2.yöntem
+
+      const yeniNotlar = notlar.map((item) => {
+        if (item.not > ortalama2) {
+          item.not = item.not * 1.2;
+        } else {
+          item.not = item.not * 1.1;
+        }
+        return item;
+      });
+
+      console.log(yeniNotlar);
+    </script>
+  </body>
+</html>
