@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      .header {
+        margin: 2rem;
+        text-align: center;
+      }
+      .basliklar {
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+      }
+      .basliklar .active {
+        color: red;
+        font-weight: 600;
+      }
+      .urunler {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Ürün Görselleri</h1>
+        <div class="basliklar">
+          <span class="urun active" data-sec="all">Ürünler</span>
+          <span class="urun" data-sec="shoe">Ayakkabı</span>
+          <span class="urun" data-sec="bag">Çanta</span>
+          <span class="urun" data-sec="headphone">Kulaklık</span>
+        </div>
+      </div>
+      <div class="urunler">
+        <div class="image shoe">
+          <img src="./img/shoe1.jpg" alt="" />
+        </div>
+        <div class="image shoe">
+          <img src="./img/shoe2.jpg" alt="" />
+        </div>
+        <div class="image bag">
+          <img src="./img/bag1.jpg" alt="" />
+        </div>
+        <div class="image bag">
+          <img src="./img/bag2.jpg" alt="" />
+        </div>
+        <div class="image headphone">
+          <img src="./img/headphone1.jpg" alt="" />
+        </div>
+        <div class="image headphone">
+          <img src="./img/headphone2.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
