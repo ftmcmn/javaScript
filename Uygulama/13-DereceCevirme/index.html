@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .sicaklik {
+        text-align: center;
+        margin-top: 200px;
+      }
+      .sayi {
+        font-size: 30px;
+      }
+      .sayi-deger {
+        margin-top: 50px;
+      }
+      .button-container {
+        font-size: 30px;
+        margin: 0 10px;
+      }
+      .sonuc {
+        font-size: 100px;
+        color: antiquewhite;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="hesaplama" class="sicaklik">
+      <label for="deger">
+        SICAKLIK DEĞERİNİ GİRİNİZ
+        <br />
+        CELSİUS VE FARENHEİT SECİMİ YAPINIZ
+      </label>
+      <br />
+
+      <input type="number" class="sayi" name="deger" id="deger" />
+      <select name="sayi-deger" id="sayi-deger" class="sayi-deger">
+        <option value="1">Celsıus</option>
+        <option value="2">Farenheıt</option>
+      </select>
+      <br />
+      <input
+        class="button-container"
+        type="button"
+        onclick="sicaklikHesaplama()"
+        name="deger"
+        value="Hesapla"
+      />
+      <br />
+      <span class="sonuc" id="sonuc"></span>
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        max-height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+      }
+      header h1 {
+        font-size: 3rem;
+      }
+      header h3 {
+        font-size: 2rem;
+      }
+      header button {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+      }
+      .game-container {
+        width: 100%;
+        height: 100%;
+        max-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+      .toprak {
+        width: 100px;
+        height: 100px;
+        background-color: #8b4513;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+      }
+      .toprak:hover {
+        background-color: #cd853f;
+      }
+      .toprak .kostebek {
+        width: 50px;
+        height: 50px;
+        background-color: #000;
+        border-radius: 50%;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .toprak .kostebek.vur {
+        display: block;
+      }
+      #vakit {
+        font-size: 3rem;
+        margin: 1rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Köstebeğe Vur</h1>
+        <h3>Skor: <span id="skor">0</span></h3>
+        <button id="baslat">Baslat</button>
+      </header>
+      <h5 id="vakit">10</h5>
+      <div class="game-container">
+        <div class="toprak">
+          <div class="kostebek"></div>
+        </div>
+        <div class="toprak">
+          <div class="kostebek"></div>
+        </div>
+        <div class="toprak">
+          <div class="kostebek"></div>
+        </div>
+        <div class="toprak">
+          <div class="kostebek"></div>
+        </div>
+        <div class="toprak">
+          <div class="kostebek"></div>
+        </div>
+        <div class="toprak">
+          <div class="kostebek"></div>
+        </div>
+        <div class="toprak">
+          <div class="kostebek"></div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
