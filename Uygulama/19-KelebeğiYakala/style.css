@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(195, 105, 105);
+}
+
+.container{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container h2{
+    font-size: 50px;
+    color: rgb(130, 74, 74);
+    text-shadow: 2px 2px 2px black;
+}
+
+.panel{
+    background-color: bisque;
+    height: 60vh;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.kareler{
+    background-color: #6789a1;
+    width: 606px;
+    height: 606px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kare{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+   
+}
+
+.resim{
+    background-image: url("kelebek.png");
+    background-size: cover;
+}
