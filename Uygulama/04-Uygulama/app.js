@@ -71,3 +71,22 @@ function sairGetir(indexNo) {
   tarih.textContent = item.tarih;
   siir.textContent = item.metin;
 }
+
+let giris = localStorage.getItem("counter");
+
+giris = giris ? ++giris : 1;
+console.log(giris);
+
+localStorage.setItem("counter", giris);
+const arkaplan = document.querySelector(".container");
+switch (true) {
+  case giris % 3 === 0:
+    arkaplan.style.background = "red";
+    break;
+  case giris % 3 === 1:
+    arkaplan.style.background = "blue";
+    break;
+  case giris % 3 === 2:
+    arkaplan.style.background = "green";
+    break;
+}

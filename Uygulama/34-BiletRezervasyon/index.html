@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #f5f6fa;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
+
+      .screen {
+        width: 100%;
+        height: 50px;
+        background: #efe7e7;
+        margin: 30px 0;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .seat {
+        width: 40px;
+        height: 40px;
+        background: #8c8998;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .seat.selected {
+        background: #694343;
+      }
+
+      .seat.reserved {
+        background: #495760;
+        cursor: not-allowed;
+      }
+
+      .seat:hover {
+        transform: scale(1.2);
+      }
+
+      .movie-list {
+        margin: 20px 0;
+      }
+
+      .movie-list select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #6c5252;
+        outline: none;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+
+      .info li {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+      }
+
+      .info li:last-child {
+        margin-right: 0;
+      }
+
+      .info li h3 {
+        margin-left: 10px;
+        font-size: 16px;
+      }
+
+      .text {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 20px;
+      }
+
+      .text .count {
+        color: #e74c3c;
+        font-weight: 700;
+      }
+
+      .text .amount {
+        color: #2ecc71;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen"></div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat reserved"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+
+    <div class="movie-list">
+      <select name="movie" id="movie">
+        <option disabled>Film Seçiniz</option>
+        <option value="20">movie 1</option>
+        <option value="22">movie 2</option>
+        <option value="25">movie 3</option>
+      </select>
+    </div>
+    <ul class="info">
+      <li>
+        <div class="seat selected"></div>
+        <h3>Seçili</h3>
+      </li>
+      <li>
+        <div class="seat"></div>
+        <h3>Boş</h3>
+      </li>
+      <li>
+        <div class="seat reserved"></div>
+        <h3>Dolu</h3>
+      </li>
+    </ul>
+
+    <p class="text">
+      <span class="count">3</span> adet koltuk için hesaplanan toplam tutar:
+      <span class="amount">60</span> TL.
+    </p>
+
+    <script src="app.js"></script>
+  </body>
+</html>
